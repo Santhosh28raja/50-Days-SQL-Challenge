@@ -1,3 +1,5 @@
+-- Write a Sql Query to find the nth highest salary of the employee from the table employees
+
 create database practice;
 use practice;
 
@@ -18,7 +20,6 @@ insert into employees values
 
 select * from employees;
 
--- Write a Sql Query to find the nth hightest salary of the employee from the table employee
 
 -- 1. Find the 2nd highest salary from table employees
 select * from employees
