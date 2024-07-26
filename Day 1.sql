@@ -20,7 +20,6 @@ insert into employees values
 
 select * from employees;
 
-
 -- 1. Find the 2nd highest salary from table employees
 select * from employees
 order by salary desc
