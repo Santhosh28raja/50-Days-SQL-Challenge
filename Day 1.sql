@@ -31,6 +31,7 @@ order by salary desc
 limit 1 offset 5;
 
 -- 3. Find the 4th highest salary from table employees (without LIMIT command)
+-- Method 1
 select * 
 from(
         select *,dense_rank() over(order by salary desc) as rnk 
@@ -38,7 +39,7 @@ from(
         ) tab
 where rnk=4;
 
--- (or)
+-- Method 2
 with cte as
 (
         select *,dense_rank() over(order by salary desc) as rnk 
