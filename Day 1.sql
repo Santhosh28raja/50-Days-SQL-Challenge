@@ -1,6 +1,5 @@
 -- Write a Sql Query to find the nth highest salary of the employee from the table employees
 
-create database practice;
 use practice;
 
 create table employees(
