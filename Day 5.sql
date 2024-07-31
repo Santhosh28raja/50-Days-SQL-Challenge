@@ -68,6 +68,7 @@ INSERT INTO employee_projects (project_id, employee_id) VALUES
 (12, 24),
 (13, 25);
 
+-- Method 1
 WITH employee_counts AS (
     SELECT project_id, COUNT(DISTINCT employee_id) AS employee_count
     FROM employee_projects
@@ -84,7 +85,8 @@ FROM project_budgets
 ORDER BY budget_per_employee DESC
 limit 5;
 
--- Remove duplicates using ROW_NUMBER()
+
+-- Method 2
 WITH DeduplicatedEmployeeProjects AS (
     SELECT 
         project_id, 
@@ -111,6 +113,7 @@ ORDER BY
 LIMIT 5;
 
 
+-- Method 3
 WITH UniqueEmployeeProjects AS (
     SELECT DISTINCT project_id, employee_id
     FROM employee_projects
